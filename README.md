@@ -18,7 +18,7 @@ You will be creating a regression test case document, and also testing the API p
 
 ## Rules
 
-When you're ready for us to review your submission, create a pull request to this repository and request a review from [@Amofe2](https://github.com/Amofe2).
+When you're ready for us to review your submission, create a pull request to this repository and request a review from [@Amofe2](https://github.com/Amofe2) and [@osupersunny](https://github.com/azadeh467).
 
 To make sure your submission has the best chance of success, you should do the following:
 
