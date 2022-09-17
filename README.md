@@ -41,4 +41,4 @@ Go through the API documentations, test the API’s accordingly and write a test
 We will be looking in particular at the clarity of your documentations (including comments where relevant), best practices and the: is it flexible enough to expand to many more test cases over time? We’ll also be interested in which test cases you documented and why - be prepared to discuss that in a follow-up interview/discussion.
 
 
-#Remember! This test is the criteria for being part of the Test Automation Program as only successful candidates will be selected for the program, so Do your best. Wish you the best. 
+# Remember! This test is the criteria for being part of the Test Automation Program as only successful candidates will be selected for the program, so Do your best. Wish you the best. 
