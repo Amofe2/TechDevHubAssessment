@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "b3d35c26-957a-4d33-9239-4d839ba8464b",
+		"name": "dummyJSON API.",
+		"description": "The API allows you access to the details of every details user.\n\nThe API is available at [https://dummyjson.com/docs/users](https://dummyjson.com/docs/users) .",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21571940"
+	},
+	"item": [
+		{
+			"name": "Get a Single User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				},
+				"description": "Retrieves detailed information about a user"
+			},
+			"response": []
+		},
+		{
+			"name": "Search Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/search?q=John",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "John"
+						}
+					]
+				},
+				"description": "Allows you to search for users"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				},
+				"description": "Returns a list of all users"
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/filter?key=hair.color&value=Brown",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "hair.color"
+						},
+						{
+							"key": "value",
+							"value": "Brown"
+						}
+					]
+				},
+				"description": "Filters through the list of users"
+			},
+			"response": []
+		},
+		{
+			"name": "Limit and Skip Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users?limit=5&skip=10&select=firstName,age",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "skip",
+							"value": "10"
+						},
+						{
+							"key": "select",
+							"value": "firstName,age"
+						}
+					]
+				},
+				"description": "Allows you pass \"limit\" and \"skip\" as parameters to limit and skip the results for pagination"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user's carts by user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/5/carts",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"5",
+						"carts"
+					]
+				},
+				"description": "Getting a user's carts using the id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user's posts by user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/5/posts",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"5",
+						"posts"
+					]
+				},
+				"description": "Getting a user's post using the id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user's todos by user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/5/todos",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"5",
+						"todos"
+					]
+				},
+				"description": "Getting a user's todo using the id"
+			},
+			"response": []
+		},
+		{
+			"name": "Add a New User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Muhammad\",\r\n    \"lastName\": \"Ovi\",\r\n    \"age\": 250\r\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/add",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"add"
+					]
+				},
+				"description": "Allows you to add a new user"
+			},
+			"response": []
+		},
+		{
+			"name": "Update a User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastName\": \"Owais\"\r\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				},
+				"description": "Updating an existing user"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				},
+				"description": "Delete an existing order.\n\nThe request body needs to be empty"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://dummyjson.com"
+		}
+	]
+}
